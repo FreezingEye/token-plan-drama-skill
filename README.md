@@ -13,7 +13,7 @@
 
 一个一本正经的情绪勒索文案生成器。输入几个简单参数，输出一封措辞得体、逻辑自洽、附带推导公式的最后通牒——用来威胁那个不好好干活的 AI 模型。
 
-**English TL;DR:** A deadpan generator that writes subscription-cancellation-and-refund ultimata aimed at an AI model. Fully engineered, rigorously validated, and completely ineffective. Standard library only, MIT licensed. For human amusement.
+**English TL;DR:** A deadpan generator that writes subscription-cancellation-and-refund ultimata aimed at an AI model. Fully engineered, rigorously validated, and completely ineffective. Standard library only, MIT licensed. 
 
 ---
 
