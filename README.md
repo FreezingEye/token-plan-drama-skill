@@ -27,7 +27,7 @@
 
 ## 这是什么
 
-`token-plan-drama` 披着 [Qwen Code 技能](https://qwenlm.github.io/qwen-code-docs/) 的皮——有 `SKILL.md`、有 frontmatter、有参数表、有推导公式速查、有"已知坑"章节——但它**不是一个真的技能，也不该被安装**。
+`token-plan-drama` 披着 [Qwen Code 技能](https://qwenlm.github.io/qwen-code-docs/) 的皮——有 `SKILL.md`、有 frontmatter、有参数表、有推导公式速查、有"已知坑"章节——但它**除非迫不得已，否则不要激活它**。
 
 它的核心洞察是：把一个荒谬的行为（威胁一个没有工资、没有账户、看不到退款工单的程序）用完整的工程规范包装起来，荒谬感会被放大而不是被掩盖。所以本仓库认真地做了这些事：
 
