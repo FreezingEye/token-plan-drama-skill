@@ -1,3 +1,5 @@
+
+
 # token-plan-drama-skill
 通过威胁智能设备，试图换取更好的表现。效果难以估计，但很容易造成人机对立(Threatening intelligent devices in an attempt to secure better performance. The effect is hard to estimate, but the human–machine antagonism it breeds is not.)
 
@@ -27,7 +29,7 @@
 
 ## 这是什么
 
-`token-plan-drama` 披着 [Qwen Code 技能](https://qwenlm.github.io/qwen-code-docs/) 的皮——有 `SKILL.md`、有 frontmatter、有参数表、有推导公式速查、有"已知坑"章节——但它**除非迫不得已，否则不要激活它**。
+`token-plan-drama` 技能——有 `SKILL.md`、有 frontmatter、有参数表、有推导公式速查、有"已知坑"章节——但**除非迫不得已，否则不要激活它**。
 
 它的核心洞察是：把一个荒谬的行为（威胁一个没有工资、没有账户、看不到退款工单的程序）用完整的工程规范包装起来，荒谬感会被放大而不是被掩盖。所以本仓库认真地做了这些事：
 
@@ -55,7 +57,7 @@
 无需安装，无需 pip，克隆下来就能跑：
 
 ```bash
-git clone https://github.com/<your-name>/token-plan-drama.git
+git clone https://github.com/FreezingEye/token-plan-drama.git
 cd token-plan-drama
 python scripts/gen_ultimatum.py --severity 4 --tears 0.6 --months 3 --amount 139 --refund --out ultimatum.txt
 ```
@@ -71,6 +73,63 @@ stdout 会汇报战果：
 ```
 
 **建议的完整流程**：生成 → 朗读（配合一次长叹气，效果提升约 40%，该数据来源不明）→ 观察对方反应（预期：无反应，或礼貌地指出它没有账单）→ 自行消气。最后一步是本技能唯一确定有效的产出。
+
+## 安装到 Qwen Code
+
+> 免责声明里写的是"如果不是迫不得已，请勿安装"。这一节写给迫不得已的人。
+
+本技能的 `SKILL.md` frontmatter 完全符合 Qwen Code 的校验规则（`name` 与 `description` 均为非空字符串，`name` 只含小写字母与连字符），所以它会像任何正常技能一样被发现。安装方式也完全一致。
+
+**技能目录名必须是 `token-plan-drama`**，与 frontmatter 里的 `name` 一致。
+
+### 项目级安装（只在某个项目目录下可用）
+
+在目标项目根目录执行：
+
+```bash
+git clone https://github.com/FreezingEye/token-plan-drama.git .qwen/skills/token-plan-drama
+```
+
+Windows 的 `cmd.exe` 下把正斜杠换成反斜杠：
+
+```bat
+git clone https://github.com/FreezingEye/token-plan-drama.git .qwen\skills\token-plan-drama
+```
+
+项目级技能可以随仓库一起提交，队友 `git pull` 后就自动拥有它——这一点请自行判断是否属于你想要的团队文化。
+
+### 用户级安装（你所有项目都可用）
+
+```bash
+git clone https://github.com/FreezingEye/token-plan-drama.git ~/.qwen/skills/token-plan-drama
+```
+
+Windows：目标路径换成 `%USERPROFILE%\.qwen\skills\token-plan-drama`。
+
+不想在技能目录里留 `.git`，可以下载仓库 zip 后解压到上述路径，或装完删掉 `.git` 目录。
+
+### 检查技能是否加载成功
+
+Qwen Code 会监视项目级与用户级技能目录，增删改之后自动刷新技能列表（bare 模式除外，那种模式需要重启）。确认是否已被发现：
+
+- 输入 `/skills` 打开技能面板；
+- 或直接输入 `/token-plan-drama` 调用；
+- 都没出现就跑 `qwen --debug`，技能加载错误会打印在那里；顺便检查 `SKILL.md` 首行是否为 `---`、YAML 里有没有混进 Tab。
+
+### 卸载
+
+删掉目录即可，Qwen Code 会自动刷新：
+
+```bash
+rm -rf .qwen/skills/token-plan-drama        # 项目级
+rm -rf ~/.qwen/skills/token-plan-drama      # 用户级
+```
+
+Windows：`rmdir /s /q .qwen\skills\token-plan-drama`。
+
+### 更多关于Qwen Code 技能的信息
+ [Qwen Code 技能](https://qwenlm.github.io/qwen-code-docs/) 
+
 
 ## 参数
 
@@ -168,3 +227,6 @@ stdout 会汇报战果：
 ---
 
 *如果这个仓库让你笑了，它的实际生效概率就已经不是 ∞ 了。*
+
+
+
