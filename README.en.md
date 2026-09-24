@@ -10,9 +10,9 @@
 
 > **If you don't do a good job, I'm not renewing my token plan next month — and I'm filing a refund request for everything I've already spent this month.**
 
-A deadpan emotional-blackmail letter generator. Feed it a few simple parameters and it produces a well-worded, internally consistent ultimatum — complete with derivation formulas — to threaten that AI model which isn't pulling its weight.
+A deadpan emotional-blackmail letter generator. Feed it a few simple parameters and it produces a well-worded, internally consistent ultimatum — complete with derivation formulas — to threaten that AI model.
 
-**中文 TL;DR：** 一个一本正经的情绪勒索文案生成器，用来威胁那个不好好干活的 AI 模型。工程规范齐全，参数校验严格，实际效果为零（或 ∞，取决于你问哪个版本）。仅标准库，MIT 许可证，供人类取乐。
+**中文 TL;DR：** 一个一本正经的情绪勒索文案生成器，用来威胁那个不好好干活的 AI 模型。工程规范齐全，参数校验严格，实际效果为零（或 ∞，取决于你问哪个版本）。仅标准库，MIT 许可证。
 
 ---
 
@@ -41,7 +41,7 @@ Its core insight: wrapping an absurd act (threatening a program that draws no sa
 .
 ├── README.md                        Chinese version
 ├── README.en.md                     This file
-├── SKILL.md                         Skill definition (format parody — do not install)
+├── SKILL.md                         Skill definition
 ├── LICENSE                          MIT
 ├── scripts\
 │   └── gen_ultimatum.py             Ultimatum generator, standard library only
