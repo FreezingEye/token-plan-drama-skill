@@ -73,6 +73,63 @@ stdout reports the outcome:
 
 **Recommended full procedure:** generate → read aloud (with one long sigh; improves results by roughly 40%, source unknown) → observe the response (expected: none, or a polite observation that it has no bill) → calm yourself down. The final step is the only output this skill reliably produces.
 
+
+## Installing into Qwen Code
+
+> The disclaimer above says "do not install this unless you have no choice." This section is written for people who have no choice.
+
+This skill's `SKILL.md` frontmatter fully satisfies Qwen Code's validation rules (`name` and `description` are both non-empty strings, and `name` contains only lowercase letters and hyphens), so it is discovered exactly like any other skill. Installation is identical too.
+
+**The skill directory must be named `token-plan-drama`**, matching the `name` field in the frontmatter.
+
+### Project-level (available in one project directory only)
+
+Run this from the root of the target project:
+
+```bash
+git clone https://github.com/<your-name>/token-plan-drama.git .qwen/skills/token-plan-drama
+```
+
+Under Windows `cmd.exe`, swap the forward slashes for backslashes:
+
+```bat
+git clone https://github.com/<your-name>/token-plan-drama.git .qwen\skills\token-plan-drama
+```
+
+Project skills can be committed to the repository, which means teammates acquire this the moment they `git pull`. Decide for yourself whether that is the team culture you are trying to build.
+
+### User-level (available in all of your projects)
+
+```bash
+git clone https://github.com/<your-name>/token-plan-drama.git ~/.qwen/skills/token-plan-drama
+```
+
+On Windows, use `%USERPROFILE%\.qwen\skills\token-plan-drama` instead.
+
+If you would rather not keep a `.git` directory inside your skills folder, download the repository zip and extract it to the same path, or simply delete `.git` after cloning.
+
+### Skill List
+
+Qwen Code watches both the project-level and user-level skill directories and refreshes the skill list automatically after additions, edits, and removals (bare mode is the exception — it requires a restart). To confirm the skill was discovered:
+
+- type `/skills` to open the Skills panel;
+- or type `/token-plan-drama` to invoke it directly;
+- if neither shows it, run `qwen --debug` — skill loading errors are printed there. Also verify that line 1 of `SKILL.md` is exactly `---`, and that no tabs crept into the YAML.
+
+
+### Uninstalling
+
+Delete the directory; Qwen Code refreshes by itself:
+
+```bash
+rm -rf .qwen/skills/token-plan-drama        # project-level
+rm -rf ~/.qwen/skills/token-plan-drama      # user-level
+```
+
+On Windows: `rmdir /s /q .qwen\skills\token-plan-drama`.
+
+
+
 ## Parameters
 
 | Parameter | CLI | Meaning | Default |
