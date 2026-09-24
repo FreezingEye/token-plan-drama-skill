@@ -26,7 +26,7 @@ One more note, and this one isn't a joke: **do not use this language on real peo
 
 ## What this is
 
-`token-plan-drama` wears the skin of a [Qwen Code skill](https://qwenlm.github.io/qwen-code-docs/) — it has a `SKILL.md`, YAML frontmatter, a parameter table, a formula reference, even a "known pitfalls" section — but it **is not a real skill and should not be installed**.
+`token-plan-drama` wears the skin of a [Qwen Code skill](https://qwenlm.github.io/qwen-code-docs/) — it has a `SKILL.md`, YAML frontmatter, a parameter table, a formula reference, even a "known pitfalls" section — but it **Do not activate it unless it is absolutely necessary**.
 
 Its core insight: wrapping an absurd act (threatening a program that draws no salary, holds no account, and cannot see your refund ticket) in complete engineering rigor *amplifies* the absurdity rather than concealing it. So this repository does all of the following in earnest:
 
